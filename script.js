@@ -81,12 +81,13 @@ function closeModal() {
   currentPostId = null;
 }
 
-document.getElementById('closeModal').onclick = closeModal;
+closeModalBtn.onclick = closeModal;
+
 window.onclick = (e) => {
   if (e.target === modal) closeModal();
-}
+};
 
-// Handle confirm action dynamically
+// Handle confirm/cancel inside modal
 modal.addEventListener('click', async (e) => {
   if (e.target.tagName === 'BUTTON' && e.target.dataset.action) {
     const actionType = e.target.dataset.action;

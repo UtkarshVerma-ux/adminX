@@ -13,7 +13,7 @@
       <p class="tagline">Manage submitted issues and block abusive users</p>
     </header>
 
-    <section id="postsContainer" class="posts-grid">
+    <section id="postList" class="posts-grid">
       <!-- Posts dynamically injected here -->
     </section>
 
@@ -35,7 +35,11 @@
   <div class="modal" id="confirmationModal" style="display: none">
     <div class="modal-content">
       <span class="close-btn" id="closeModal">&times;</span>
-      <p id="modalMessage">Action completed successfully.</p>
+      <p id="modalMessage">Are you sure?</p>
+      <div class="modal-actions">
+        <button data-action="confirm" class="confirm-btn">Confirm</button>
+        <button data-action="cancel" class="cancel-btn">Cancel</button>
+      </div>
     </div>
   </div>
 
