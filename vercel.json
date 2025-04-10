@@ -1,0 +1,34 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/block",
+        "dest": "/api/block-user.js"
+      },
+      {
+        "src": "/api/posts",
+        "methods": ["GET"],
+        "dest": "/api/get-posts.js"
+      },
+      {
+        "src": "/api/posts/(.*)",
+        "methods": ["DELETE"],
+        "dest": "/api/delete-post.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  

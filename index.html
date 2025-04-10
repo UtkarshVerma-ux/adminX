@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Portal - Issue Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Dashboard</h1>
+      <p class="tagline">Manage submitted issues and block abusive users</p>
+    </header>
+
+    <section id="postsContainer" class="posts-grid">
+      <!-- Posts dynamically injected here -->
+    </section>
+
+    <template id="postTemplate">
+      <div class="post-card">
+        <p class="post-text"></p>
+        <div class="media-preview"></div>
+        <div class="post-footer">
+          <span class="user-id"></span>
+          <div class="admin-actions">
+            <button class="block-btn">Block User</button>
+            <button class="delete-btn">Delete Post</button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  <div class="modal" id="confirmationModal" style="display: none">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <p id="modalMessage">Action completed successfully.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
